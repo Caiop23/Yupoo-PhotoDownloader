@@ -1,0 +1,3 @@
+from CSVmaker import *
+TworzenieGlownegoPlikuCSV()
+
