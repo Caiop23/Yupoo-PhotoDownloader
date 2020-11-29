@@ -75,7 +75,7 @@ def PobieranieZdjec(x):
                 os.rename(os.path.join(path, file), os.path.join(path, ''.join([str(index), 'big.jpg'])))
         except:
             pass
-        os.remove(str(x) + 'TESTY.csv')
+        
     except:
         pass
 
