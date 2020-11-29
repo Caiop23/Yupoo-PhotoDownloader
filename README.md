@@ -1,8 +1,8 @@
 # YupooPhotoDownloader
 
 ####################
-import requests\n
-import json\n
+import requests
+import json
 from retrying import retry
 from bs4 import BeautifulSoup
 import csv
