@@ -25,7 +25,7 @@ def TworzenieGlownegoPlikuCSV():
     response = requests.get(url)
     data = response.text
     soup = BeautifulSoup(data, 'lxml')
-    writer.writerow(["LINKS", "NAME", "PHOTOS", "LINK ALIEXPRESS", "dsds"])
+    writer.writerow(["LINKS"])
 
     row1 = []
     row2 = []
