@@ -20,7 +20,7 @@ def TworzenieGlownegoPlikuCSV():
     text = url
 
     head, sep, tail = text.partition('x.yupoo.com')
-    print(head + "x.yupoo.com")
+    print("Pobieram zdjecia z strony " + head + "x.yupoo.com")
 
     response = requests.get(url)
     data = response.text
@@ -28,14 +28,13 @@ def TworzenieGlownegoPlikuCSV():
     writer.writerow(["LINKS"])
 
     row1 = []
-    row2 = []
-
+    count=0
     for link in soup.findAll('a', class_='album__main'):
-
+        count=count+1
         q = (link.get('href'))
-        print(q)
-        row1.append(q)
 
+        row1.append(q)
+    print("Zostanie pobrane " + str(count) + " albumów ze zdjęciami.")
 
 
     for c in range(len(row1)):
@@ -43,12 +42,8 @@ def TworzenieGlownegoPlikuCSV():
 
 
     f.close()
-    print("PLIK Z LINKAMI ZOSTAWL UTOWRZONY...")
-    import subprocess
-
-    print("Uruchamiam PobieranieZdjec.py\n [...]")
-    #subprocess.run("python PobieranieZdjec.py", shell=True)
-
+    print("Plik csv zawierający linki znajdziesz w " + os.getcwd())
+    print("Zaczynam pobieranie zdjęć.")
 
 TworzenieGlownegoPlikuCSV()
 
