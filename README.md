@@ -1,14 +1,24 @@
+
 # YupooPhotoDownloader
+## Setup
 
-####################
-import requests
-import json
-from retrying import retry
-from bs4 import BeautifulSoup
-import csv
-import pandas as pd
-import os
-####################
+Ensure you have python 3.6+ installed.
 
-1.Uzupełnij plik UZUPELNIJ.json
-2.python YupooPhotoDownloader.py
+```
+pip install -r requirements.txt
+
+```
+
+
+## enter your details into the file
+
+UZUPELNIJ.json
+
+
+## Running the script
+
+
+```
+python YupooPhotoDownloader.py
+
+```
